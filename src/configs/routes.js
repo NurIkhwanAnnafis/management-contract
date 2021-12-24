@@ -8,14 +8,24 @@ const menu = [
     exact: true,
     page: 'Login',
     component: lazy(() => import('../containers/Login')),
-    layout: Login
+    layout: Login,
+    role: []
   },
   {
     path: '/admin',
     page: ['Admin'],
     exact: true,
     component: lazy(() => import('../containers/Main/Admin')),
-    layout: Main
+    layout: Main,
+    role: []
+  },
+  {
+    path: '/user',
+    page: ['User'],
+    exact: true,
+    component: lazy(() => import('../containers/Main/Users')),
+    layout: Main,
+    role: []
   },
 ]
 

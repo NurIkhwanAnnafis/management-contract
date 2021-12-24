@@ -10,7 +10,7 @@ const index = (props) => {
 
   return (
     <Layout className="vh-100">
-      <Content>
+      <Content {...props}>
         <div className="container" style={{ marginTop: 64 }}>
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>

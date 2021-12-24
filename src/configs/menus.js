@@ -3,19 +3,19 @@ import { BarChartOutlined, FileDoneOutlined, GiftOutlined, MoneyCollectOutlined,
 export const sidebarMenus = [
   {
     name: 'Admin',
-    path: 'admin',
+    path: '/admin',
     icon: <UserOutlined />,
     subrute: []
   },
   {
     name: 'User',
-    path: 'user',
+    path: '/user',
     icon: <UserOutlined />,
     subrute: []
   },
   {
     name: 'Invoice',
-    path: 'invoice',
+    path: '/invoice',
     icon: <FileDoneOutlined />,
     subrute: [
       {
@@ -27,25 +27,25 @@ export const sidebarMenus = [
   },
   {
     name: 'Salary',
-    path: 'Salary',
+    path: '/salary',
     icon: <MoneyCollectOutlined />,
     subrute: []
   },
   {
     name: 'Cash Flow Statement',
-    path: 'cash-flow-statement',
+    path: '/cash-flow-statement',
     icon: <BarChartOutlined />,
     subrute: []
   },
   {
     name: 'Products',
-    path: 'products',
+    path: '/products',
     icon: <GiftOutlined />,
     subrute: []
   },
   {
     name: 'Roles',
-    path: 'roles',
+    path: '/roles',
     icon: <UserSwitchOutlined />,
     subrute: []
   }
