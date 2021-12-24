@@ -8,10 +8,13 @@ const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const isRouteExist = menu.findIndex(x => x.path === location.pathname);
     if (location.pathname === '/') {
       window.location.href = '/login';
+    } else if(isRouteExist === -1) {
+      window.location.href = '/not-found';
     }
-  },[])
+  },[location])
 
   return (
     <Switch>
