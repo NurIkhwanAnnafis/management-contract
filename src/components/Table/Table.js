@@ -1,4 +1,5 @@
 import { Table, Pagination, Input, Space, Button } from "antd";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const { Search } = Input;
 
@@ -9,7 +10,13 @@ const index = (props) => {
     onSearch, 
     title,
     buttonCreate,
-  } = props
+  } = props;
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleCreate = () => {
+    navigate(`${location.pathname}/create`)
+  }
 
   return (
     <div>
@@ -19,7 +26,7 @@ const index = (props) => {
         </div>
         <div className="col-4 col-md-5 d-flex justify-content-end">
           <Search placeholder="input search text" onSearch={onSearch} enterButton style={{ width: 300 }} />
-          {buttonCreate && <Button type="primary" className="ms-3" style={{ width: 200 }}>{`Create`}</Button>}
+          {buttonCreate && <Button type="primary" className="ms-3" style={{ width: 200 }} onClick={handleCreate}>{`Create`}</Button>}
         </div>
       </div>
       <br />

@@ -1,7 +1,10 @@
-import { lazy } from "react";
+import { Fragment, lazy } from "react";
 import Login from '../components/Layout/Login'
 import Main from '../components/Layout/Main'
 import NotFound from '../components/Layout/NotFound'
+import ContextProviderAdmin from "../containers/Main/Admin/context/ContextProviderAdmin";
+
+const noContext = ({ children }) => <Fragment>{children}</Fragment>;
 
 const menu = [
   {
@@ -10,7 +13,8 @@ const menu = [
     page: ['Login'],
     component: lazy(() => import('../containers/Login')),
     layout: Login,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/admin',
@@ -18,7 +22,17 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Admin')),
     layout: Main,
-    role: []
+    role: [],
+    context: ContextProviderAdmin
+  },
+  {
+    path: '/admin/create',
+    page: ['Admin', 'Create'],
+    exact: true,
+    component: lazy(() => import('../containers/Main/Admin/create')),
+    layout: Main,
+    role: [],
+    context: ContextProviderAdmin
   },
   {
     path: '/user',
@@ -26,7 +40,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Users')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/salary',
@@ -34,7 +49,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Salary')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/products',
@@ -42,7 +58,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Products')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/cash-flow-statement',
@@ -50,7 +67,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/CashFlowStatement')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/invoice/approval',
@@ -58,7 +76,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Invoice/Approval')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/roles',
@@ -66,7 +85,8 @@ const menu = [
     exact: true,
     component: lazy(() => import('../containers/Main/Roles')),
     layout: Main,
-    role: []
+    role: [],
+    context: noContext
   },
   {
     path: '/not-found',
@@ -74,7 +94,8 @@ const menu = [
     page: ['Not Found'],
     component: lazy(() => import('../containers/NotFound')),
     layout: NotFound,
-    role: []
+    role: [],
+    context: noContext
   },
 ]
 

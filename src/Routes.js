@@ -25,7 +25,9 @@ const Index = () => {
           element={
             <detail.layout {...global} breadcrumb={detail.page}>
               <Suspense fallback={null}>
-                <detail.component />
+                <detail.context>
+                  <detail.component />
+                </detail.context>
               </Suspense>
             </detail.layout>
           }
