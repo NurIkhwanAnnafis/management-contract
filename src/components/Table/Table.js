@@ -3,18 +3,23 @@ import { Table, Pagination, Input, Space, Button } from "antd";
 const { Search } = Input;
 
 const index = (props) => {
-  const { columns, dataSource, onSearch, title } = props
+  const { 
+    columns, 
+    dataSource, 
+    onSearch, 
+    title,
+    buttonCreate,
+  } = props
+
   return (
     <div>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-7">
           <h4>{title}</h4>
         </div>
-        <div className="col-8 col-md-4">
-          <Search placeholder="input search text" onSearch={onSearch} enterButton />
-        </div>
-        <div className="col-4 col-md-2">
-          <Button type="primary" style={{ width: '100%' }}>{`Create`}</Button>
+        <div className="col-4 col-md-5 d-flex justify-content-end">
+          <Search placeholder="input search text" onSearch={onSearch} enterButton style={{ width: 300 }} />
+          {buttonCreate && <Button type="primary" className="ms-3" style={{ width: 200 }}>{`Create`}</Button>}
         </div>
       </div>
       <br />

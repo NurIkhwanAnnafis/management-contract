@@ -23,11 +23,11 @@ const Index = () => {
           key={detail.path}
           path={detail.path}
           element={
-            <Suspense fallback={null}>
-              <detail.layout {...global} breadcrumb={detail.page}>
+            <detail.layout {...global} breadcrumb={detail.page}>
+              <Suspense fallback={null}>
                 <detail.component />
-              </detail.layout>
-            </Suspense>
+              </Suspense>
+            </detail.layout>
           }
         />
       ))}

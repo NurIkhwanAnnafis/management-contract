@@ -20,7 +20,7 @@ export const sidebarMenus = [
     subrute: [
       {
         name: 'Invoice Approval',
-        path: 'invoice/approval',
+        path: '/invoice/approval',
         icon: null,
       }
     ]

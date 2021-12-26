@@ -25,7 +25,7 @@ const index = (props) => {
           ): (
             <SubMenu key={val.path} icon={val.icon || defaultIcon} title={val.name}>
               {val.subrute.map(detail => (
-                <Menu.Item key={detail.path} onClick={() => navigate(val.path)}>{detail.name}</Menu.Item>
+                <Menu.Item key={detail.path} onClick={() => navigate(detail.path)}>{detail.name}</Menu.Item>
               ))}
             </SubMenu>  
           ))}
@@ -54,7 +54,7 @@ const index = (props) => {
             ): (
               <SubMenu key={val.path} icon={val.icon || defaultIcon} title={val.name}>
                 {val.subrute.map(detail => (
-                  <Menu.Item key={detail.path} onClick={() => navigate(val.path)}>{detail.name}</Menu.Item>
+                  <Menu.Item key={detail.path} onClick={() => navigate(detail.path)}>{detail.name}</Menu.Item>
                 ))}
               </SubMenu>  
             ))}
