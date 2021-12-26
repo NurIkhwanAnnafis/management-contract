@@ -5,7 +5,11 @@ const index = (props) => {
 
   return (
     <div>
-      <Table columns={columns} dataSource={data} title="Master Admin" />
+      <Table 
+        columns={columns} 
+        dataSource={data} 
+        title="Master Admin" 
+      />
     </div>
   )
 }

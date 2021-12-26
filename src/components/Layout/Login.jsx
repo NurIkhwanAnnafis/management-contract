@@ -3,8 +3,8 @@ import React, { Fragment } from 'react'
 const Login = ({ children }) => {
 
   return (
-    <div style={{ background: '#FEF5ED' }}>
-      <div className='container vh-100'>
+    <div>
+      <div className='vh-100' style={{ overflowX: 'hidden', overflowY: 'hidden' }}>
         {children}
       </div>
     </div>
